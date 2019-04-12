@@ -1,0 +1,63 @@
+{
+    "info": {
+        "contact": {},
+        "license": {}
+    },
+    "paths": {
+        "/v2/jobs/{id}/logs": {
+            "get": {
+                "description": "Retrieves logs",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "Jobs"
+                ],
+                "summary": "Retrieves logs",
+                "operationId": "jobLogs",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The job guid per RFC 4122",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Just to show it works for Success",
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/model.PropMap"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.Prop": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.PropMap": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

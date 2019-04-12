@@ -1,0 +1,4 @@
+package: .
+import:
+- package: github.com/alecthomas/template
+- package: github.com/swaggo/swag

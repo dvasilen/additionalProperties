@@ -1,0 +1,40 @@
+definitions:
+  model.Prop:
+    properties:
+      key:
+        type: string
+    type: object
+  model.PropMap:
+    additionalProperties:
+      properties:
+        key:
+          type: string
+      type: object
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /v2/jobs/{id}/logs:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves logs
+      operationId: jobLogs
+      parameters:
+      - description: The job guid per RFC 4122
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: Just to show it works for Success
+          schema:
+            $ref: '#/definitions/model.PropMap'
+            type: object
+      summary: Retrieves logs
+      tags:
+      - Jobs
