@@ -23,7 +23,7 @@ func main() {
 // @Accept   json
 // @Produce  plain
 // @Param   id path string  true  "The job guid per RFC 4122"
-// @Success 200 {object}  model.PropMap "Just to show it works for Success"
+// @Success 200 {object}  model.PropMap "Just to show additionalProperties work for Success"
 // @Router /v2/jobs/{id}/logs [get]
 func JobLogs(w http.ResponseWriter, r *http.Request) {
 

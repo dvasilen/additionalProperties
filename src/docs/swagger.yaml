@@ -31,7 +31,7 @@ paths:
       - text/plain
       responses:
         "200":
-          description: Just to show it works for Success
+          description: Just to show additionalProperties work for Success
           schema:
             $ref: '#/definitions/model.PropMap'
             type: object
