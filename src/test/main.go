@@ -8,7 +8,6 @@ import (
 // @title AdditionalProperties
 // @version 1.0
 // @description Example for additionalProperties in query
-
 // host localhost:8089
 // @BasePath /test
 func main() {
@@ -16,7 +15,6 @@ func main() {
 }
 
 // @Param   q query {object} model.PropMap false "The optional query parameters"
-
 
 // @Summary Retrieves logs
 // @Description Retrieves logs
